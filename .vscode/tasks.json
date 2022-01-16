@@ -38,7 +38,7 @@
         {
             "type": "shell",
             "label": "Run application",
-            "command": "${workspaceFolder}\\build\\LwLibPROJECT.exe",
+            "command": "${workspaceFolder}/build/LwLibPROJECT",
             "args": [],
             "problemMatcher": [],
         },

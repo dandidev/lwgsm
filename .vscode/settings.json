@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "lwmem.h": "c",
+        "client.h": "c",
+        "lwmem_opt.h": "c",
+        "lwmem_opts.h": "c",
+        "sms_send_receive.h": "c"
+    }
+}
