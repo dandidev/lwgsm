@@ -61,10 +61,10 @@
 
 #define LWGSM_CFG_NETCONN                     1
 
-#define LWGSM_CFG_MEM_CUSTOM                  1
+#define LWGSM_CFG_MEM_CUSTOM                  0 /* only developing 1 */
 
 #if defined(WIN32)
-#define LWGSM_CFG_SYS_PORT					LWGSM_SYS_PORT_WIN32
+#define LWGSM_CFG_SYS_PORT					LWGSM_SYS_PORT_POSIX
 #endif
 
 #endif /* !__DOXYGEN__ */

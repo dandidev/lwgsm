@@ -1,7 +1,7 @@
 // lwgsm_dev_os.cpp : Defines the entry point for the console application.
 //
 
-#include "windows.h"
+#include <pthread.h>
 #include "lwgsm/lwgsm.h"
 
 #include "lwgsm/apps/lwgsm_mqtt_client_api.h"
@@ -16,8 +16,8 @@
 #include "client.h"
 #include "lwmem/lwmem.h"
 
-static void main_thread(void* arg);
-DWORD main_thread_id;
+static void* main_thread(void* arg);
+pthread_t main_thread_id;
 
 static lwgsmr_t lwgsm_evt(lwgsm_evt_t* evt);
 static lwgsmr_t lwgsm_conn_evt(lwgsm_evt_t* evt);
@@ -43,8 +43,8 @@ typedef struct {
     const char* puk;
 } my_sim_t;
 my_sim_t sim = {
-    .pin = "7958",
-    .puk = "10663647",
+    .pin = "9152",
+    .puk = "14301189",
 };
 
 uint8_t lwmem_region_1[0x4000];
@@ -66,7 +66,7 @@ main() {
     }
 
     /* Create start main thread */
-    CreateThread(0, 0, (LPTHREAD_START_ROUTINE)main_thread, NULL, 0, &main_thread_id);
+    pthread_create(&main_thread_id, NULL,main_thread, NULL);
 
     /* Do nothing at this point but do not close the program */
     while (1) {
@@ -208,7 +208,7 @@ input_thread(void* arg) {
 /**
  * \brief           Main thread for init purposes
  */
-static void
+static void*
 main_thread(void* arg) {
     lwgsm_sim_state_t sim_state;
 
