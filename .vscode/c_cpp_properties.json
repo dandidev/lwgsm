@@ -2,14 +2,14 @@
     "version": 4,
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Arch_linux",
             "includePath": [
-                "${workspaceFolder}\\dev\\",
-                "${workspaceFolder}\\lwgsm\\src\\include\\",
-                "${workspaceFolder}\\lwgsm\\src\\include\\system\\port\\win32",
-                "${workspaceFolder}\\snippets\\include",
-                "${workspaceFolder}\\..\\lwmem\\lwmem\\src\\include",
-                "${workspaceFolder}\\"    
+                "${workspaceFolder}/dev/",
+                "${workspaceFolder}/lwgsm/src/include/",
+                "${workspaceFolder}/lwgsm/src/include/system/port/posix",
+                "${workspaceFolder}/snippets/include",
+                "${workspaceFolder}/../lwmem/lwmem/src/include",
+                "${workspaceFolder}/"    
             ],
             "defines": [
                 "WIN32",
@@ -18,7 +18,7 @@
                 "_UNICODE",
                 "LWGSM_DEV"
             ],
-            "compilerPath": "c:\\msys64\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "windows-gcc-x86",

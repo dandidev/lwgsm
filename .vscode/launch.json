@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(Windows) Launch",
+            "name": "(Arch) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\build\\LwLibPROJECT.exe",
-            "miDebuggerPath": "c:\\msys64\\mingw64\\bin\\gdb.exe",
+            "program": "${workspaceFolder}/build/LwLibPROJECT",
+            "miDebuggerPath": "/usr/bin/gdb",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
